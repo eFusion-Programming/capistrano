@@ -15,7 +15,7 @@ namespace :git do
   task :wrapper do
     on release_roles :all do
       execute :mkdir, "-p", "#{fetch(:tmp_dir)}/#{fetch(:application)}/"
-      run "#!/bin/sh -e\nexec /usr/bin/ssh -o PasswordAuthentication=no -o StrictHostKeyChecking=no \"$@\" && #{fetch(:tmp_dir)}/#{fetch(:application)}/git-ssh.sh"
+      execute "#!/bin/sh -e\nexec /usr/bin/ssh -o PasswordAuthentication=no -o StrictHostKeyChecking=no \"$@\" && #{fetch(:tmp_dir)}/#{fetch(:application)}/git-ssh.sh"
       execute :chmod, "+x", "#{fetch(:tmp_dir)}/#{fetch(:application)}/git-ssh.sh"
     end
   end
