@@ -1,4 +1,5 @@
 require_relative 'configuration/question'
+require_relative 'configuration/question_custom'
 require_relative 'configuration/servers'
 require_relative 'configuration/server'
 
