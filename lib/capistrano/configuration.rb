@@ -20,6 +20,11 @@ module Capistrano
       set(key, question)
     end
 
+    def ask_custom(message, key, default=nil)
+      question = QuestionCustom.new(self, message, key, default)
+      set(key, question)
+    end
+
     def set(key, value)
       config[key] = value
     end

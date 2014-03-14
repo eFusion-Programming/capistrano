@@ -31,6 +31,10 @@ module Capistrano
         env.ask(key, value)
       end
 
+      def ask_custom(question, key, value)
+        env.ask(question, key, value)
+      end
+
       def role(name, servers, options={})
         env.role(name, servers, options)
       end
