@@ -12,7 +12,7 @@ module Capistrano
       end
 
       private
-      attr_reader :env, :key, :default
+      attr_reader :env, :message, :key, :default
 
       def ask_question
         $stdout.puts question
